@@ -1,0 +1,10 @@
+name = Audio Streaming Player
+description = Provides a themable HTML5 Audio Streaming Player within a Drupal Block.
+package = Media
+version = 7.1
+core = 7.x
+dependencies[] = libraries
+
+configure = admin/config/media/audioStreamingPlayer
+project = "audio_streaming_player"
+
