@@ -5,5 +5,3 @@ core = 7.x
 dependencies[] = libraries
 
 configure = admin/config/media/audioStreamingPlayer
-project = "audio_streaming_player"
-
