@@ -6,12 +6,15 @@
  */
 
 /**
- * Implements hook_permission().
+ * Implementation hook_perm().
  */
 function audio_streaming_player_perm() {
   return array('administer audiostreamingplayer', 'access audiostreamingplayer configuration');
 }
 
+/*
+ * Implementation of hook_permission()
+ */
 function audio_streaming_player_permission() {
   return array(
     'administer audiostreamingplayer' => array(
