@@ -17,11 +17,9 @@ div.audio {
   margin: 0 auto;
   height: 42px;
 }
-
 div.audio ul.controls{
   margin:0 auto;
 }
-
 div.audio ul.controls a.jp-mute,
 div.audio ul.controls a.jp-unmute {
   width: 15px;
@@ -29,49 +27,40 @@ div.audio ul.controls a.jp-unmute {
   top: 15px;
   left: 280px;
 }
-
 div.audio ul.controls a.jp-volume-max{
   width: 25px;
   height: 20px;
   top: 12px;
   left: 385px;
 }
-
 div.audio-player audio,
 div.audio-player {
   width:0px;
   height:0px;
 }
-
 div.audio-player {
   background: url("img/bkplayer_main.png")  no-repeat;
 }
-
 div.interface {
   position: relative;
   width:100%;
 }
-
 div.interface ul.controls a.jp-unmute {
   background: url("img/mute_icon.png") no-repeat;
 }
-
 div.interface ul.controls a.jp-volume-max {
   position: absolute;
   background: url("img/speaker_upvol.png")  no-repeat;
 }
-
 div.interface ul.controls a.jp-volume-max:hover {
   background: url("img/speaker_upvol.png")  no-repeat;
 }
-
 div.interface ul.controls {
   list-style-type:none;
   padding: 0;
   overflow:hidden;
   width: 210px;
 }
-
 div.interface ul.controls a {
   display:block;
   overflow:hidden;
@@ -80,27 +69,21 @@ div.interface ul.controls a {
   margin: 0 1px 2px 0;
   padding: 0;
 }
-
 div.interface ul.controls a.jp-mute i {
   color: #666666;
 }
-
 div.interface ul.controls a.jp-mute,
 div.interface ul.controls a.jp-unmute  {
   background: url("img/mute_icon.png") no-repeat;
   position: absolute;
-
 }
-
 div.interface ul.controls li {
   display:inline;
   float: left;
 }
-
 div.single-player  .controls li a{
   width: 99px;
 }
-
 div.single-player .interface .details {
   position: absolute;
   color: #666;
@@ -109,20 +92,16 @@ div.single-player .interface .details {
   width: 200px;
   top: 14px;
   left: 60px;
-
 }
-
 div.single-player .interface .details .jp-title{
   color: white;
 }
-
 div.single-player .interface .details ul {
   list-style-type:none;	
   font-size:.7em;
   margin: 0;
   padding: 0;
 }
-
 div.single-player .interface .details li {
   position: relative;
   padding: 2px 0;
@@ -134,7 +113,6 @@ div.single-player .interface .details li {
   padding:0;
   text-align:center;
 }
-
 div.single-player  .jp-pause {
   background: url("img/pause.png") no-repeat;
   width: 20px !important;
@@ -143,7 +121,6 @@ div.single-player  .jp-pause {
   top: 10px;
   left: 12px;
 }
-
 div.single-player  .jp-play {
   background: url("img/play.png") no-repeat;
   width: 20px !important;
@@ -152,7 +129,6 @@ div.single-player  .jp-play {
   top: 10px;
   left: 15px;
 }
-
 .jp-no-solution {
   padding:5px;
   font-size:.8em;
@@ -164,18 +140,15 @@ div.single-player  .jp-play {
   color:#FFF;
   display:none;
 }
-
 .jp-no-solution a {
   color:#FFF;
 }
-
 .jp-no-solution span {
   font-size:1em;
   display:block;
   text-align:center;
   font-weight:bold;
 }
-
 .jp-volume-bar {
   background: #222222;
   position: absolute;
@@ -187,11 +160,9 @@ div.single-player  .jp-play {
   border-radius: 9px;
   padding: 2px;
 }
-
 .jp-volume-bar:hover {
   cursor:  pointer;
 }
-
 .jp-volume-bar-value {
   background: orange;
   height: 12px;

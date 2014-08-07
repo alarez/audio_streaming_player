@@ -12,9 +12,6 @@
   font-family: "Myriad Pro Regular","Trebuchet MS";
   font-size: 12px;
 }
-.demo-container a, .demo-container a:link, .demo-container a:visited, .demo-container a:hover, .demo-container a:focus, .demo-container a:active {
-   
-}
 .demo-container ul {
   list-style-type:none;
   padding:0;

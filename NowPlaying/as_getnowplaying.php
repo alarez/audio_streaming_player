@@ -6,8 +6,6 @@ $result = false;
 $icy_metaint = -1;
 $needle = 'StreamTitle=';
 $ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36';
-
-
 $opts = array(
   'http' => array(
     'method' => 'GET',
@@ -15,7 +13,6 @@ $opts = array(
     'user_agent' => $ua
   )
 );
-
 $default = stream_context_set_default($opts);
 //Open the stream
 $stream = fopen($stream_url, 'r');
@@ -30,7 +27,6 @@ if ($stream && ($meta_data = stream_get_meta_data($stream)) && isset($meta_data[
     }
   }
 }
-
 if ($icy_metaint != -1) {
   $buffer = stream_get_contents($stream, 300, $icy_metaint);
   //get information from the stream url

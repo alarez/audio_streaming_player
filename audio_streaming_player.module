@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements of hook_perm().
+ * Implements hook_perm().
  */
 function audio_streaming_player_perm() {
   return array('administer audiostreamingplayer', 'access audiostreamingplayer configuration');
