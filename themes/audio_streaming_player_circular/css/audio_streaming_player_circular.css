@@ -1,15 +1,16 @@
 /*
- * Circular theme for Audio Streaming Player module
+ * Circular theme for Audio Streaming Player module.
  *
- * Theme Name: Circular Player
+ * Theme Name: Circular Player.
  *
  */
+
 div.audio {
   font-size:1.25em;
   font-family:Verdana, Arial, sans-serif;
   line-height:1.6;
-  background: url("img/main_playerbg.png")  no-repeat;
-  width:252px;
+  background: url("img/main_playerbg.png") no-repeat;
+  width:282px;
   padding:5px;
   margin: 0 auto;
   height: 157px;
@@ -194,16 +195,6 @@ div.single-player  .jp-play {
   background: url("img/progress-bar.png") no-repeat;
   height: 42px;
 
-div.audio {
-  font-size:1.25em;
-  font-family:Verdana, Arial, sans-serif;
-  line-height:1.6;
-  background: url("img/main_playerbg.png")  no-repeat;
-  width:282px;
-  padding:5px;
-  margin: 0 auto;
-  height: 157px;
-}
 
 div.audio ul.controls{
   margin:0 auto;
