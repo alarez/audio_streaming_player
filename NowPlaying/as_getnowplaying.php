@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Obtain the metadata of an stream Url.
+ */
 $audio_streaming_player_stream_url = $_POST['audio_streaming_player_stream_url'];
 // Result,false if not contain metadata, otherwise will contain the stream info.
 $result = FALSE;
