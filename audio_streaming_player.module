@@ -58,9 +58,9 @@ function audio_streaming_player_form() {
   $option2 = 'Only Text' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_text/thumbnail.png/></br></br></br></br>';
   // Skins.
   $options = array(
-    0 => t("$option0"),
-    1 => t("$option1"),
-    2 => t("$option2"),
+    0 => $option0,
+    1 => $option1,
+    2 => $option2,
   );
   $form['audio_streaming_player_theme'] = array(
     '#type' => 'radios',
