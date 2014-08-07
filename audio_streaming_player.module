@@ -1,8 +1,12 @@
 <?php
 
 /**
- * Valid permissions for this module
- * @return array An array of valid permissions for the audio_streaming_player module
+ * @file
+ * Render a Streaming Audio player as a Drupal Block.
+ */
+
+/**
+ * Implements hook_permission().
  */
 function audio_streaming_player_perm() {
   return array('administer audiostreamingplayer', 'access audiostreamingplayer configuration');
@@ -18,8 +22,7 @@ function audio_streaming_player_permission() {
 }
 
 /**
- * Menu for this module
- * @return array An array with this module's settings.
+ * Implements hook_menu().
  */
 function audio_streaming_player_menu() {
   $items = array();
