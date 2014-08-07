@@ -6,7 +6,6 @@
       <ul>
         <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
         <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-        <br><br>
         <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
         <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
         <li><a href="javascript:;" class="jp-volume-bar" tabindex="1" title="volume bar">|&lt;----------&gt;|</a></li>

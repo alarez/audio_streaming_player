@@ -9,7 +9,6 @@
         <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
         <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
       </ul>
-
       <div class="jp-volume-bar">
         <div class="jp-volume-bar-value"></div>
       </div>
