@@ -56,11 +56,11 @@ function audio_streaming_player_form() {
   $option0 = 'Black Player' . '<img align="left" width="133px" heigth="180px" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_black/thumbnail.png/></br></br></br></br>';
   $option1 = 'Circular Player' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_circular/thumbnail.png/></br></br></br></br>';
   $option2 = 'Only Text' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_text/thumbnail.png/></br></br></br></br>';
-// Skins.
+  // Skins.
   $options = array(
-    0 => t($option0),
-    1 => t($option1),
-    2 => t($option2),
+    0 => t("$option0"),
+    1 => t("$option1"),
+    2 => t("$option2"),
   );
   $form['audio_streaming_player_theme'] = array(
     '#type' => 'radios',
@@ -157,7 +157,7 @@ function audio_streaming_player_block_view($delta = '') {
           'css' => array(
             drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$audio_streaming_player_theme" . '/css/' . "$audio_streaming_player_theme" . '.css',
           ),
-          // Libraries. 
+          // Libraries.
           'js' => array(
             libraries_get_path('JPlayer') . '/jquery.jplayer.min.js',
             drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$audio_streaming_player_theme" . '/js/' . "$audio_streaming_player_theme" . '.js',
