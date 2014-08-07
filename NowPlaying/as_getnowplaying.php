@@ -1,6 +1,6 @@
 <?php
 //The stream url for obtain icecast metadata
-$stream_url = $_POST['stream_url'];
+$audio_streaming_player_stream_url = $_POST['audio_streaming_player_stream_url'];
 //Result, false if the file does not contain metadata, otherwise will contain the stream information
 $result = false;
 $icy_metaint = -1;
@@ -15,7 +15,7 @@ $opts = array(
 );
 $default = stream_context_set_default($opts);
 //Open the stream
-$stream = fopen($stream_url, 'r');
+$stream = fopen($audio_streaming_player_stream_url, 'r');
 
 //Ask it the file contains metadata
 if ($stream && ($meta_data = stream_get_meta_data($stream)) && isset($meta_data['wrapper_data'])) {

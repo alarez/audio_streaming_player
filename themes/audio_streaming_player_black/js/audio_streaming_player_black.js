@@ -8,7 +8,7 @@
             var stream = {
                 //Atributtes: title and stream url
                 title: startmessage,
-                mp3: Drupal.settings.audiostreamingplayer.stream_url
+                mp3: Drupal.settings.audiostreamingplayer.audio_streaming_player_stream_url
             },
             ready = false;
 
@@ -16,7 +16,7 @@
                 ready: function(event) {
                     ready = true;
                     //If the variable auto-play is on, then starts playing from the beginning
-                    if (Drupal.settings.audiostreamingplayer.auto_play === 1) {
+                    if (Drupal.settings.audiostreamingplayer.audio_streaming_player_auto_play === 1) {
                         $(this).jPlayer("setMedia", stream).jPlayer("play");
                         pause_ = false;
                     }
@@ -51,7 +51,7 @@
 
                 if (!pause_) {
                     var parameters = {
-                        "stream_url": Drupal.settings.audiostreamingplayer.stream_url
+                        "audio_streaming_player_stream_url": Drupal.settings.audiostreamingplayer.audio_streaming_player_stream_url
                     };
                     //ajax call to get the metadata
                     $.ajax({

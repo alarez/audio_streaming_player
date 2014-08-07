@@ -13,7 +13,7 @@ function audio_streaming_player_perm() {
 }
 
 /**
- * Implements of hook_permission().
+ * Implements hook_permission().
  */
 function audio_streaming_player_permission() {
   return array(
@@ -42,41 +42,35 @@ function audio_streaming_player_menu() {
 }
 
 /**
- * Implement the hook_form().
- * Create a form for module administration page.
+ * Implements hook_form().
  */
 function audio_streaming_player_form() {
-  // Stream Url
-  $form['stream_url'] = array(
+  $form['audio_streaming_player_stream_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Enter the Stream URL'),
-    '#default_value' => variable_get('stream_url'),
+    '#default_value' => variable_get('audio_streaming_player_stream_url'),
     '#size' => 75,
     '#maxlength' => 180,
     '#required' => TRUE
   );
-
-
-  // Skins
+  // Skins.
   $options = array(
     0 => t('Black Player' . '<img align="left" width="133px" heigth="180px" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_black/thumbnail.png/></br></br></br></br>'),
     1 => t('Circular Player' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_circular/thumbnail.png/></br></br></br></br>'),
     2 => t('Only Text' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_text/thumbnail.png/></br></br></br></br>')
   );
-  $form['theme'] = array(
+  $form['audio_streaming_player_theme'] = array(
     '#type' => 'radios',
     '#title' => t('Select the theme for the player'),
-    '#default_value' => variable_get('theme'),
+    '#default_value' => variable_get('audio_streaming_player_theme'),
     '#options' => $options
   );
-
-  // Auto-Play Option
-  $form['auto_play'] = array(
+  // Auto-Play Option.
+  $form['audio_streaming_player_auto_play'] = array(
     '#type' => 'checkbox',
-    '#default_value' => variable_get('auto_play'),
-    '#title' => t('Auto Play'),
+    '#default_value' => variable_get('audio_streaming_player_auto_play'),
+    '#title' => t('Auto Play')
   );
-
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Save'
@@ -86,30 +80,20 @@ function audio_streaming_player_form() {
 }
 
 /**
- * Form submission for user data.
- * @param form an array that contains user data
- * @param form_state an array that contains user data
+ * Implements hook_form_submit().
  */
 function audio_streaming_player_form_submit($form, &$form_state) {
-  //get data
-  $stream_url = $form_state['values']['stream_url'];
-  $theme = $form_state['values']['theme'];
-  $auto_play = $form_state['values']['auto_play'];
-
-  //Set variables
-  $stream_url_set = variable_set('stream_url', ($form_state['values']['stream_url']));
-  $theme_set = variable_set('theme', ($form_state['values']['theme']));
-  $auto_play_set = variable_set('auto_play', ($form_state['values']['auto_play']));
-
-
-  //Confirmation message
+  // Set variables.
+  variable_set('audio_streaming_player_stream_url', ($form_state['values']['audio_streaming_player_stream_url']));
+  variable_set('audio_streaming_player_theme', ($form_state['values']['audio_streaming_player_theme']));
+  variable_set('audio_streaming_player_auto_play', ($form_state['values']['audio_streaming_player_auto_play']));
+  // Confirmation message.
   drupal_set_message(t('The configuration options have been saved'));
   $form_state['redirect'] = 'admin/config/media/audioStreamingPlayer';
 }
 
 /**
- * Implementes hook_libraries_info
- * @return array with information from the libraries it needs the module
+ * Implements hook_libraries_info().
  */
 function audio_streaming_player_libraries_info() {
   $libraries = array();
@@ -119,7 +103,6 @@ function audio_streaming_player_libraries_info() {
     'download url' => 'http://www.jplayer.org/latest/jQuery.jPlayer.2.6.0.source.zip',
     'version arguments' => array(
       'file' => 'jquery.jplayer.min.js',
-      // jQuery FlexSlider v2.1
       'pattern' => '/jQuery JPlayer v(\d+\.+\d+)/',
       'lines' => 2,
     ),
@@ -129,14 +112,12 @@ function audio_streaming_player_libraries_info() {
       ),
     ),
   );
-
-
   return $libraries;
 }
 
 /**
- * Implementation of hook_block_info()
- * @return  the information of the block
+ * Implementation hook_block_info().
+ * @return the information of the block.
  */
 function audio_streaming_player_block_info() {
   $blocks['streamingplayer'] = array(
@@ -146,20 +127,19 @@ function audio_streaming_player_block_info() {
 }
 
 /**
- *  Implementation of hook_block_view()
- * 
+ *  Implementation hook_block_view().
  */
 function audio_streaming_player_block_view($delta = '') {
-  //Identify the selected theme
-  switch (variable_get('theme')) {
+  // Identify the selected theme.
+  switch (variable_get('audio_streaming_player_theme')) {
     case 0:
-      $theme = 'audio_streaming_player_black';
+      $audio_streaming_player_theme = 'audio_streaming_player_black';
       break;
     case 1:
-      $theme = 'audio_streaming_player_circular';
+      $audio_streaming_player_theme = 'audio_streaming_player_circular';
       break;
     case 2:
-      $theme = 'audio_streaming_player_text';
+      $audio_streaming_player_theme = 'audio_streaming_player_text';
       break;
   }
 
@@ -168,17 +148,17 @@ function audio_streaming_player_block_view($delta = '') {
   switch ($delta) {
     case 'streamingplayer':
       $block['content'] = array(
-        '#markup' => theme("$theme", array('theme' => "")),
+        '#markup' => theme("$audio_streaming_player_theme", array('theme' => "")),
         '#attached' => array(
           'css' => array(
-            drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$theme" . '/css/' . "$theme" . '.css',
+            drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$audio_streaming_player_theme" . '/css/' . "$audio_streaming_player_theme" . '.css',
           ),
-          //Libraries 
+          // Libraries. 
           'js' => array(
             libraries_get_path('JPlayer') . '/jquery.jplayer.min.js',
-            drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$theme" . '/js/' . "$theme" . '.js',
+            drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$audio_streaming_player_theme" . '/js/' . "$audio_streaming_player_theme" . '.js',
             libraries_get_path('JPlayer') . '/add-on/jquery.jplayer.inspector.js',
-            drupal_add_js(array('audiostreamingplayer' => array('swf' => '/' . libraries_get_path('JPlayer') . '/', 'stream_url' => variable_get('stream_url'), 'auto_play' => variable_get('auto_play'))), 'setting'),
+            drupal_add_js(array('audiostreamingplayer' => array('swf' => '/' . libraries_get_path('JPlayer') . '/', 'audio_streaming_player_stream_url' => variable_get('audio_streaming_player_stream_url'), 'audio_streaming_player_auto_play' => variable_get('audio_streaming_player_auto_play'))), 'setting'),
           ),
         ),
       );
@@ -188,21 +168,21 @@ function audio_streaming_player_block_view($delta = '') {
 }
 
 /**
- * Implements hook_theme()
+ * Implements hook_theme().
  */
 function audio_streaming_player_theme() {
   return array(
     'audio_streaming_player_circular' => array(
       'variables' => array('account' => NULL),
-      'template' => 'themes/audio_streaming_player',
+      'template' => 'themes/audio_streaming_player'
     ),
     'audio_streaming_player_black' => array(
       'variables' => array('account' => NULL),
-      'template' => 'themes/audio_streaming_player',
+      'template' => 'themes/audio_streaming_player'
     ),
     'audio_streaming_player_text' => array(
       'variables' => array('account' => NULL),
-      'template' => 'themes/audio_streaming_player_text/audio_streaming_player_text',
+      'template' => 'themes/audio_streaming_player_text/audio_streaming_player_text'
     )
   );
 }
