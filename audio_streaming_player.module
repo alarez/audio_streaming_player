@@ -162,7 +162,12 @@ function audio_streaming_player_block_view($delta = '') {
             libraries_get_path('JPlayer') . '/jquery.jplayer.min.js',
             drupal_get_path('module', 'audio_streaming_player') . '/themes/' . "$audio_streaming_player_theme" . '/js/' . "$audio_streaming_player_theme" . '.js',
             libraries_get_path('JPlayer') . '/add-on/jquery.jplayer.inspector.js',
-            drupal_add_js(array('audiostreamingplayer' => array('swf' => '/' . libraries_get_path('JPlayer') . '/', 'audio_streaming_player_stream_url' => variable_get('audio_streaming_player_stream_url'), 'audio_streaming_player_auto_play' => variable_get('audio_streaming_player_auto_play'))), 'setting'),
+            drupal_add_js(array(
+              'audiostreamingplayer' => array(
+                'swf' => '/' . libraries_get_path('JPlayer') . '/',
+                'audio_streaming_player_stream_url' => variable_get('audio_streaming_player_stream_url'),
+                'audio_streaming_player_auto_play' => variable_get('audio_streaming_player_auto_play'))),
+                'setting'),
           ),
         ),
       );
