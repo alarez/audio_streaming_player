@@ -12,7 +12,7 @@ function audio_streaming_player_perm() {
   return array('administer audiostreamingplayer', 'access audiostreamingplayer configuration');
 }
 
-/*
+/**
  * Implements of hook_permission().
  */
 function audio_streaming_player_permission() {
@@ -29,7 +29,7 @@ function audio_streaming_player_permission() {
  */
 function audio_streaming_player_menu() {
   $items = array();
-  //Link of menu:
+  // Link of menu:
   $items['admin/config/media/audioStreamingPlayer'] = array(
     'title' => 'Audio Streaming Player',
     'description' => 'Administer Audio Streaming Player Configuration',
@@ -42,12 +42,11 @@ function audio_streaming_player_menu() {
 }
 
 /**
- * Implement the hook_form
- * Create a form for configuring the module
- * @return type
+ * Implement the hook_form().
+ * Create a form for module administration page.
  */
 function audio_streaming_player_form() {
-  //Stream Url
+  // Stream Url
   $form['stream_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Enter the Stream URL'),
@@ -58,7 +57,7 @@ function audio_streaming_player_form() {
   );
 
 
-  //Themes
+  // Skins
   $options = array(
     0 => t('Black Player' . '<img align="left" width="133px" heigth="180px" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_black/thumbnail.png/></br></br></br></br>'),
     1 => t('Circular Player' . '<img align="left" src=/' . drupal_get_path('module', 'audio_streaming_player') . '/themes/audio_streaming_player_circular/thumbnail.png/></br></br></br></br>'),
@@ -71,7 +70,7 @@ function audio_streaming_player_form() {
     '#options' => $options
   );
 
-  //Auto-Play Option
+  // Auto-Play Option
   $form['auto_play'] = array(
     '#type' => 'checkbox',
     '#default_value' => variable_get('auto_play'),
