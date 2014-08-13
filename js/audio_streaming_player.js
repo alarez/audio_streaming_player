@@ -1,3 +1,6 @@
+/**
+ * Audio Streaming Player.
+ */
 (function($) {
   'use strict';
   Drupal.behaviors.audiostreamingplayer = {
@@ -16,7 +19,7 @@
       $("#audio_streaming_player_black").jPlayer({
         ready: function(event) {
           ready = true;
-          //If the variable auto-play is on, then starts playing from the beginning
+          // If the variable auto-play is on, then starts playing from the beginning.
           if (Drupal.settings.audiostreamingplayer.audio_streaming_player_auto_play === 1) {
             $(this).jPlayer("setMedia", stream).jPlayer("play");
             pause_ = false;
@@ -129,9 +132,9 @@
         // Container where are located the player.
         cssSelectorAncestor: "#audio_streaming_player_text_container",
         solution: 'flash, html',
-        //swf path
+        // Swf path.
         swfPath: Drupal.settings.audiostreamingplayer.swf,
-        //Allowed Formats
+        // Allowed Formats.
         supplied: "mp3,oga",
         preload: "none",
         wmode: "window",
@@ -142,7 +145,7 @@
       $("#inspector_circular").jPlayerInspector({jPlayer: $("#audio_streaming_player")});
       $("#inspector_black").jPlayerInspector({jPlayer: $("#audio_streaming_player_black")});
 
-      //Get the metadata from the stream
+      // Get the metadata from the stream.
       var refreshId = setInterval(function() {
 
         if (!pause_) {
@@ -159,9 +162,7 @@
             },
             success: function(response) {
               // Load the result in the container.
-              $(inCourse).html(response);
-             
-              
+              $(inCourse).html(response);              
             }
           });
         }

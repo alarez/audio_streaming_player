@@ -6,24 +6,24 @@
  */
 
 div.audio {
-  font-size:1.25em;
-  font-family:Verdana, Arial, sans-serif;
-  line-height:1.6;
+  font-size: 1.25em;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 1.6;
   background: url("img/main_playerbg.png") no-repeat;
-  width:282px;
-  padding:5px;
+  width: 282px;
+  padding: 5px;
   margin: 0 auto;
   height: 157px;
 }
-div.audio ul.controls{
-  margin:0 auto;
+div.audio ul.controls {
+  margin: 0 auto;
 }
 div.audio ul.controls a.jp-mute,
 div.audio ul.controls a.jp-unmute {
   top: 66px;
   left: 45px;
 }
-div.audio ul.controls a.jp-volume-max{
+div.audio ul.controls a.jp-volume-max {
   top: 66px;
   left: 184px;
   width: 31px;
@@ -31,16 +31,15 @@ div.audio ul.controls a.jp-volume-max{
 }
 div.audio-player audio,
 div.audio-player {
-  width:0px;
-  height:0px;
-
+  width: 0px;
+  height: 0px;
 }
 div.audio-player {
   background: url("img/bg-buttons-frame.png")  no-repeat;
 }
 div.interface {
   position: relative;
-  width:100%;
+  width :100%;
 }
 div.interface ul.controls a.jp-unmute {
   background: url("img/speakermute_icon.png") no-repeat;
@@ -56,15 +55,15 @@ div.interface ul.controls a.jp-volume-max:hover {
   background: url("img/loudspeaker_icon.png")  no-repeat;
 }
 div.interface ul.controls {
-  list-style-type:none;
+  list-style-type: none;
   padding: 0;
-  overflow:hidden;
+  overflow: hidden;
   width: 210px;
 }
 div.interface ul.controls a {
-  display:block;
-  overflow:hidden;
-  text-indent:-9999px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
   height: 34px;
   margin: 0 1px 2px 0;
   padding: 0;
@@ -79,10 +78,10 @@ div.interface ul.controls a.jp-mute {
   height: 25px;
 }
 div.interface ul.controls li {
-  display:inline;
+  display: inline;
   float: left;
 }
-div.single-player  .controls li a{
+div.single-player  .controls li a {
     width: 99px;
 }
 div.single-player .interface .details {
@@ -94,25 +93,25 @@ div.single-player .interface .details {
   top: 140px;
   left: -5px;
 }
-div.single-player .interface .details .jp-title{
+div.single-player .interface .details .jp-title {
   color: #666666;
 }
 div.single-player .interface .details ul {
-  list-style-type:none;	
-  font-size:.7em;
+  list-style-type: none;	
+  font-size: .7em;
   margin: 0;
   padding: 0;
 }
 div.single-player .interface .details li {
   position: relative;
   padding: 2px 0;
-  border-top:1px solid #554461;
-  border-bottom:1px solid #180a1f;
+  border-top: 1px solid #554461;
+  border-bottom: 1px solid #180a1f;
   overflow: hidden;
-  border-bottom:none;
-  border-top:none;
-  padding:0;
-  text-align:center;
+  border-bottom: none;
+  border-top: none;
+  padding: 0;
+  text-align: center;
 }
 div.single-player  .jp-pause {
   background: url("img/pause_icon.png") no-repeat;
@@ -131,24 +130,24 @@ div.single-player  .jp-play {
   left: 120px;
 }
 .jp-no-solution {
-  padding:5px;
-  font-size:.8em;
-  background-color:#3a2a45;
-  border-top:2px solid #554461;
-  border-left:2px solid #554461;
-  border-right:2px solid #180a1f;
-  border-bottom:2px solid #180a1f;
-  color:#FFF;
-  display:none;
+  padding: 5px;
+  font-size: .8em;
+  background-color: #3a2a45;
+  border-top: 2px solid #554461;
+  border-left: 2px solid #554461;
+  border-right: 2px solid #180a1f;
+  border-bottom: 2px solid #180a1f;
+  color: #fff;
+  display: none;
 }
 .jp-no-solution a {
-  color:#FFF;
+  color: #fff;
 }
 .jp-no-solution span {
-  font-size:1em;
-  display:block;
-  text-align:center;
-  font-weight:bold;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+  font-weight: bold;
 }
 div.single-player .jp-volume-bar {
   background: url("img/bg-progress-bar.png") no-repeat;
@@ -160,7 +159,7 @@ div.single-player .jp-volume-bar {
   left: 69px;
 }
 div.single-player .jp-volume-bar:hover {
-  cursor:  pointer;
+  cursor: pointer;
 }
 div.single-player .jp-volume-bar-value {
   background: url("img/progress-bar.png") no-repeat;
