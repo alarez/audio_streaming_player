@@ -150,7 +150,7 @@ div.single-player  .jp-play {
   text-align:center;
   font-weight:bold;
 }
-.jp-volume-bar {
+div.single-player .jp-volume-bar {
   background: url("img/bg-progress-bar.png") no-repeat;
   position: absolute;
   width: 133px;
@@ -159,127 +159,10 @@ div.single-player  .jp-play {
   top: 14px;
   left: 69px;
 }
-.jp-volume-bar:hover {
+div.single-player .jp-volume-bar:hover {
   cursor:  pointer;
 }
-.jp-volume-bar-value {
+div.single-player .jp-volume-bar-value {
   background: url("img/progress-bar.png") no-repeat;
   height: 42px;
-}
-div.audio ul.controls{
-  margin:0 auto;
-}
-div.audio ul.controls a.jp-mute,
-div.audio ul.controls a.jp-unmute {
-  top: 66px;
-  left: 45px;
-}
-div.audio ul.controls a.jp-volume-max{
-  top: 66px;
-  left: 184px;
-}
-div.audio-player audio,
-div.audio-player {
-  width:0px;
-  height:0px;
-}
-div.audio-player {
-  background: url("img/bg-buttons-frame.png")  no-repeat;
-}
-div.interface {
-  position: relative;
-  width:100%;
-}
-div.interface ul.controls a.jp-unmute {
-  background: url("img/speakermute_icon.png") no-repeat;
-}
-div.interface ul.controls a.jp-volume-max {
-  position: absolute;
-  background: url("img/loudspeaker_icon.png")  no-repeat;
-}
-div.interface ul.controls a.jp-volume-max:hover {
-  background: url("img/loudspeaker_icon.png")  no-repeat;
-}
-div.interface ul.controls {
-  list-style-type:none;
-  padding: 0;
-  overflow:hidden;
-  width: 210px;
-}
-div.interface ul.controls a {
-  display:block;
-  overflow:hidden;
-  text-indent:-9999px;
-  height: 34px;
-  margin: 0 1px 2px 0;
-  padding: 0;
-}
-div.interface ul.controls a.jp-mute i {
-  color: #666666;
-}
-div.interface ul.controls a.jp-mute,
-div.interface ul.controls a.jp-unmute {
-  background: url("img/mute_icon.png") no-repeat;
-  position: absolute;
-  width: 8px;
-  height: 25px;
-}
-div.interface ul.controls li {
-  display:inline;
-  float: left;
-}
-div.single-player  .controls li a{
-    width: 99px;
-}
-div.single-player  .jp-pause {
-  background: url("img/pause_icon.png") no-repeat;
-  width: 20px !important;
-  height: 36px !important;
-  position: absolute;
-  top: 60px;
-  left: 110px;
-}
-div.single-player  .jp-play {
-  background: url("img/play_icon.png") no-repeat;
-  width: 20px !important;
-  height: 36px !important;
-  position: absolute;
-  top: 60px;
-  left: 120px;
-}
-.jp-no-solution {
-  padding:5px;
-  font-size:.8em;
-  background-color:#3a2a45;
-  border-top:2px solid #554461;
-  border-left:2px solid #554461;
-  border-right:2px solid #180a1f;
-  border-bottom:2px solid #180a1f;
-  color:#FFF;
-  display:none;
-}
-.jp-no-solution a {
-  color:#FFF;
-}
-.jp-no-solution span {
-  font-size:1em;
-  display:block;
-  text-align:center;
-  font-weight:bold;
-}
-.jp-volume-bar {
-  background: url("img/bg-progress-bar.png") no-repeat;
-  position: absolute;
-  width: 350px;
-  height: 40px;
-  overflow: hidden;
-  top: 15px;
-  left: 69px;
-}
-.jp-volume-bar:hover {
-  cursor:  pointer;
-}
-.jp-volume-bar-value {
-  background: url("img/progress-bar.png") no-repeat;
-  height: 100px;
 }
