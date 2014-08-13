@@ -1,6 +1,7 @@
 /**
  * Audio Streaming Player.
  */
+
 (function($) {
   'use strict';
   Drupal.behaviors.audiostreamingplayer = {
@@ -162,7 +163,7 @@
             },
             success: function(response) {
               // Load the result in the container.
-              $(inCourse).html(response);              
+              $(inCourse).html(response);
             }
           });
         }

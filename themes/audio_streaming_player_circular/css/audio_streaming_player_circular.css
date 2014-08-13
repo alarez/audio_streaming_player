@@ -39,7 +39,7 @@ div.audio-player {
 }
 div.interface {
   position: relative;
-  width :100%;
+  width: 100%;
 }
 div.interface ul.controls a.jp-unmute {
   background: url("img/speakermute_icon.png") no-repeat;
@@ -82,7 +82,7 @@ div.interface ul.controls li {
   float: left;
 }
 div.single-player  .controls li a {
-    width: 99px;
+  width: 99px;
 }
 div.single-player .interface .details {
   position: absolute;
@@ -97,7 +97,7 @@ div.single-player .interface .details .jp-title {
   color: #666666;
 }
 div.single-player .interface .details ul {
-  list-style-type: none;	
+  list-style-type: none;
   font-size: .7em;
   margin: 0;
   padding: 0;

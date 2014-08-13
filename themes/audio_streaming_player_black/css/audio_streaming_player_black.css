@@ -71,7 +71,7 @@ div.interface_black ul.controls_black a.jp-mute i {
   color: #666666;
 }
 div.interface_black ul.controls_black a.jp-mute,
-div.interface_black ul.controls_black a.jp-unmute  {
+div.interface_black ul.controls_black a.jp-unmute {
   background: url("img/mute_icon.png") no-repeat;
   position: absolute;
 }
@@ -95,7 +95,7 @@ div.single-player_black > .interface_black .details_black .jp-title {
   color: white;
 }
 div.single-player_black > .interface_black .details_black ul {
-  list-style-type: none;	
+  list-style-type: none;
   font-size: .7em;
   margin: 0;
   padding: 0;

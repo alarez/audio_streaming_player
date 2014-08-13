@@ -117,7 +117,7 @@ function audio_streaming_player_delete_block($form, &$form_state) {
   $name = explode('_', $form_state['clicked_button']['#name']);
   // Obtain the number of block.
   $number_of_block = $name[1];
-  variable_set('audio_streaming_player_deleted_blocks', variable_get('audio_streaming_player_deleted_blocks') . '-' . $numberOfBlock);
+  variable_set('audio_streaming_player_deleted_blocks', variable_get('audio_streaming_player_deleted_blocks') . '-' . $number_of_block);
   // Confirmation Message.
   drupal_set_message(t('Audio Streaming Player Block successfully removed'));
   $form_state['redirect'] = 'admin/config/media/audioStreamingPlayer';
@@ -127,7 +127,7 @@ function audio_streaming_player_delete_block($form, &$form_state) {
  * Implements hook_form().
  */
 function audio_streaming_player_form() {
-  // Stream Url
+  // Stream Url.
   $form['audio_streaming_player_stream_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Enter the Stream URL'),
