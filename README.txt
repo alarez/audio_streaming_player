@@ -8,7 +8,7 @@ Drupal block witch you can assign to any Drupal Region.
 -- REQUIREMENTS --
 
 jPlayer library. 
-Download it from http://www.jplayer.org/latest/jQuery.jPlayer.2.6.0.source.zip
+Download it from http://www.jplayer.org/2.6.0/jQuery.jPlayer.2.6.0.zip
 
 
 -- INSTALLATION --
