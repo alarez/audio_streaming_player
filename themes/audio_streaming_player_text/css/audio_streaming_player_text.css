@@ -7,21 +7,21 @@
 
 .demo-container {
   background-color: #333333;
-  border: 1px solid #009BE3;
-  padding:0 20px;
+  border: 1px solid #009be3;
+  padding: 0 20px;
   font-family: "Myriad Pro Regular","Trebuchet MS";
   font-size: 12px;
 }
 .demo-container ul {
-  list-style-type:none;
-  padding:0;
-  margin:1em 0;
-  width:300px;
-  overflow:hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0;
+  width: 300px;
+  overflow: hidden;
 }
 .demo-container ul span {
-  color: #009BE3;
+  color: #009be3;
 }
-.demo-container li{
+.demo-container li {
   float: left;
 }

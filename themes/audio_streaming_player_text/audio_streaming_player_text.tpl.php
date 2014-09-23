@@ -1,11 +1,10 @@
-<div id="audio_streaming_player" class="jp-jplayer"></div>
-
-<div id="jp_container_1" class="demo-container">
+<div id="audio_streaming_player_text" class="jp-jplayer"></div>
+<div id="audio_streaming_player_text_container" class="demo-container">
   <div>
     <div>
       <ul>
-        <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+        <li><a href="javascript:;" class="jp-play" tabindex="1">play&nbsp;</a></li>
+        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause&nbsp;</a></li>
         <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
         <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
         <li><a href="javascript:;" class="jp-volume-bar" tabindex="1" title="volume bar">|&lt;----------&gt;|</a></li>
@@ -19,7 +18,8 @@
       <ul>
         <li>
         <center>
-          <span style="color: white;" class="jp-title" id="responsecontainer"></span>
+          <span style="color: white;" class="jp-title" id="responsecontainer_text">Click Play to start listening</span>
+          
         </center>
         </li>
       </ul>
@@ -31,4 +31,6 @@
       <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
     </div>
   </div>
+</div>
+<div id="inspector_text" hidden="">
 </div>

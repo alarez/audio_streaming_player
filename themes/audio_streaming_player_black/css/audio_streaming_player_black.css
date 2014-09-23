@@ -1,4 +1,3 @@
-
 /*
  * Black theme for Audio Streaming Player module
  *
@@ -6,84 +5,84 @@
  *
  */
 
-div.audio {
-  font-size:1.25em;
-  font-family:Verdana, Arial, sans-serif;
-  line-height:1.6;
+div.audio_black {
+  font-size: 1.25em;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 1.6;
   background: url("img/bkplayer_main.png")  no-repeat;
-  width:410px;
-  padding:5px;
+  width: 410px;
+  padding: 5px;
   margin: 0 auto;
   height: 42px;
 }
-div.audio ul.controls{
-  margin:0 auto;
+div.audio_black ul.controls_black {
+  margin: 0 auto;
 }
-div.audio ul.controls a.jp-mute,
-div.audio ul.controls a.jp-unmute {
+div.audio_black ul.controls_black a.jp-mute,
+div.audio_black ul.controls_black a.jp-unmute {
   width: 15px;
   height: 15px;
   top: 15px;
   left: 280px;
 }
-div.audio ul.controls a.jp-volume-max{
+div.audio_black ul.controls_black a.jp-volume-max {
   width: 25px;
   height: 20px;
   top: 12px;
   left: 385px;
 }
-div.audio-player audio,
-div.audio-player {
-  width:0px;
-  height:0px;
+div.audio-player_black audio_black,
+div.audio-player_black {
+  width: 0px;
+  height: 0px;
 }
-div.audio-player {
+div.audio-player_black {
   background: url("img/bkplayer_main.png")  no-repeat;
 }
-div.interface {
+div.interface_black {
   position: relative;
-  width:100%;
+  width: 100%;
 }
-div.interface ul.controls a.jp-unmute {
+div.interface_black ul.controls_black a.jp-unmute {
   background: url("img/mute_icon.png") no-repeat;
 }
-div.interface ul.controls a.jp-volume-max {
+div.interface_black ul.controls_black a.jp-volume-max {
   position: absolute;
   background: url("img/speaker_upvol.png")  no-repeat;
 }
-div.interface ul.controls a.jp-volume-max:hover {
+div.interface_black ul.controls_black a.jp-volume-max:hover {
   background: url("img/speaker_upvol.png")  no-repeat;
 }
-div.interface ul.controls {
-  list-style-type:none;
+div.interface_black ul.controls_black {
+  list-style-type: none;
   padding: 0;
-  overflow:hidden;
+  overflow: hidden;
   width: 210px;
 }
-div.interface ul.controls a {
-  display:block;
-  overflow:hidden;
-  text-indent:-9999px;
+div.interface_black ul.controls_black a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
   height: 34px;
   margin: 0 1px 2px 0;
   padding: 0;
 }
-div.interface ul.controls a.jp-mute i {
+div.interface_black ul.controls_black a.jp-mute i {
   color: #666666;
 }
-div.interface ul.controls a.jp-mute,
-div.interface ul.controls a.jp-unmute  {
+div.interface_black ul.controls_black a.jp-mute,
+div.interface_black ul.controls_black a.jp-unmute {
   background: url("img/mute_icon.png") no-repeat;
   position: absolute;
 }
-div.interface ul.controls li {
-  display:inline;
+div.interface_black ul.controls_black li {
+  display: inline;
   float: left;
 }
-div.single-player  .controls li a{
+div.single-player_black > .controls_black li a {
   width: 99px;
 }
-div.single-player .interface .details {
+div.single-player_black > .interface_black .details_black {
   position: absolute;
   color: #666;
   font-weight: bold;
@@ -92,27 +91,27 @@ div.single-player .interface .details {
   top: 14px;
   left: 60px;
 }
-div.single-player .interface .details .jp-title{
+div.single-player_black > .interface_black .details_black .jp-title {
   color: white;
 }
-div.single-player .interface .details ul {
-  list-style-type:none;	
-  font-size:.7em;
+div.single-player_black > .interface_black .details_black ul {
+  list-style-type: none;
+  font-size: .7em;
   margin: 0;
   padding: 0;
 }
-div.single-player .interface .details li {
+div.single-player_black > .interface_black .details_black li {
   position: relative;
   padding: 2px 0;
-  border-top:1px solid #554461;
-  border-bottom:1px solid #180a1f;
+  border-top: 1px solid #554461;
+  border-bottom: 1px solid #180a1f;
   overflow: hidden;
-  border-bottom:none;
-  border-top:none;
-  padding:0;
-  text-align:center;
+  border-bottom: none;
+  border-top: none;
+  padding: 0;
+  text-align: center;
 }
-div.single-player  .jp-pause {
+div.single-player_black .interface_black .controls_black  .jp-pause {
   background: url("img/pause.png") no-repeat;
   width: 20px !important;
   height: 20px !important;
@@ -120,7 +119,7 @@ div.single-player  .jp-pause {
   top: 10px;
   left: 12px;
 }
-div.single-player  .jp-play {
+div.single-player_black .interface_black .controls_black .jp-play {
   background: url("img/play.png") no-repeat;
   width: 20px !important;
   height: 20px !important;
@@ -128,27 +127,27 @@ div.single-player  .jp-play {
   top: 10px;
   left: 15px;
 }
-.jp-no-solution {
-  padding:5px;
-  font-size:.8em;
-  background-color:#3a2a45;
-  border-top:2px solid #554461;
-  border-left:2px solid #554461;
-  border-right:2px solid #180a1f;
-  border-bottom:2px solid #180a1f;
-  color:#FFF;
-  display:none;
+div.single-player_black > .jp-no-solution {
+  padding: 5px;
+  font-size: .8em;
+  background-color: #3a2a45;
+  border-top: 2px solid #554461;
+  border-left: 2px solid #554461;
+  border-right: 2px solid #180a1f;
+  border-bottom: 2px solid #180a1f;
+  color: #fff;
+  display: none;
 }
-.jp-no-solution a {
-  color:#FFF;
+div.single-player_black > .jp-no-solution a {
+  color: #fff;
 }
-.jp-no-solution span {
-  font-size:1em;
-  display:block;
-  text-align:center;
-  font-weight:bold;
+div.single-player_black > .jp-no-solution span {
+  font-size: 1em;
+  display: block;
+  text-align: center;
+  font-weight: bold;
 }
-.jp-volume-bar {
+div.single-player_black .interface_black .jp-volume-bar {
   background: #222222;
   position: absolute;
   width: 80px;
@@ -159,10 +158,10 @@ div.single-player  .jp-play {
   border-radius: 9px;
   padding: 2px;
 }
-.jp-volume-bar:hover {
-  cursor:  pointer;
+div.single-player_black .interface_black .jp-volume-bar:hover {
+  cursor: pointer;
 }
-.jp-volume-bar-value {
+div.single-player_black .interface_black  .jp-volume-bar-value {
   background: orange;
   height: 12px;
   border-radius: 6px;
