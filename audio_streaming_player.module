@@ -83,8 +83,7 @@ function audio_streaming_player_page_callback() {
         '#prefix' => '<tr><td><b>Audio Streaming Player Block ' . $i . '</b></td>',
         '#suffix' => '<td>' . l(t('Configure'), ''
             . 'admin/structure/block/manage/audio_streaming_player/streamingplayer_' .
-            $i . '/configure') . ''
-        . '</td>',
+            $i . '/configure') . '</td>',
       );
       // Form that contain a button to deleta a block.
       $form['submit_' . $i] = array(
@@ -118,7 +117,7 @@ function audio_streaming_player_delete_block($form, &$form_state) {
   $name = explode('_', $form_state['clicked_button']['#name']);
   // Obtain the number of block.
   $number_of_block = $name[1];
-  variable_set('audio_streaming_player_deleted_blocks', 
+  variable_set('audio_streaming_player_deleted_blocks',
       variable_get('audio_streaming_player_deleted_blocks') . '-' . $number_of_block);
   // Confirmation Message.
   drupal_set_message(t('Audio Streaming Player Block successfully removed'));
@@ -143,7 +142,7 @@ function audio_streaming_player_form() {
   $option1 = 'Circular Player' . '<img align="left" src=/' .
       drupal_get_path('module', 'audio_streaming_player') .
       '/themes/audio_streaming_player_circular/thumbnail.png/></br></br></br></br>';
-  $option2 = 'Only Text' . '<img align="left" src=/' .
+  $option2 = 'Only Text <img align="left" src=/' .
       drupal_get_path('module', 'audio_streaming_player') .
       '/themes/audio_streaming_player_text/thumbnail.png/></br></br></br></br>';
   // Skins.
@@ -199,7 +198,8 @@ function audio_streaming_player_form_submit($form, &$form_state) {
     // Confirmation message.
     drupal_set_message(t('The configuration options have been saved'));
     $form_state['redirect'] = 'admin/config/media/audioStreamingPlayer/newPlayer';
-  }else{
+  }
+  else {
     drupal_set_message(t('Invalid URL'), 'error');
   }
 }
@@ -247,7 +247,7 @@ function audio_streaming_player_block_configure($delta = '') {
   $option1 = 'Circular Player' . '<img align="left" src=/' .
       drupal_get_path('module', 'audio_streaming_player') .
       '/themes/audio_streaming_player_circular/thumbnail.png/></br></br></br></br>';
-  $option2 = 'Only Text' . '<img align="left" src=/' .
+  $option2 = 'Only Text <img align="left" src=/' .
       drupal_get_path('module', 'audio_streaming_player') .
       '/themes/audio_streaming_player_text/thumbnail.png/></br></br></br></br>';
   // Skins.
@@ -280,12 +280,13 @@ function audio_streaming_player_block_save($delta = '', $edit = array()) {
   if (audio_streaming_player_validate_url($edit['audio_streaming_player_stream_url'])) {
       // Set variables.
   variable_set('audio_streaming_player_stream_url_' . $delta[strlen($delta) - 1],
-      ($edit['audio_streaming_player_stream_url']));
+    ($edit['audio_streaming_player_stream_url']));
   variable_set('audio_streaming_player_theme_' . $delta[strlen($delta) - 1],
-      ($edit['audio_streaming_player_theme']));
+    ($edit['audio_streaming_player_theme']));
   variable_set('audio_streaming_player_auto_play_' . $delta[strlen($delta) - 1],
-      ($edit['audio_streaming_player_auto_play']));
-  }else{
+    ($edit['audio_streaming_player_auto_play']));
+  }
+  else {
     drupal_set_message(t('Invalid URL'), 'error');
   }
 }
