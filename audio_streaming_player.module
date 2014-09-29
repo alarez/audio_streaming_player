@@ -278,13 +278,13 @@ function audio_streaming_player_block_configure($delta = '') {
  */
 function audio_streaming_player_block_save($delta = '', $edit = array()) {
   if (audio_streaming_player_validate_url($edit['audio_streaming_player_stream_url'])) {
-      // Set variables.
-  variable_set('audio_streaming_player_stream_url_' . $delta[strlen($delta) - 1],
-    ($edit['audio_streaming_player_stream_url']));
-  variable_set('audio_streaming_player_theme_' . $delta[strlen($delta) - 1],
-    ($edit['audio_streaming_player_theme']));
-  variable_set('audio_streaming_player_auto_play_' . $delta[strlen($delta) - 1],
-    ($edit['audio_streaming_player_auto_play']));
+  // Set variables.
+    variable_set('audio_streaming_player_stream_url_' . $delta[strlen($delta) - 1],
+      ($edit['audio_streaming_player_stream_url']));
+    variable_set('audio_streaming_player_theme_' . $delta[strlen($delta) - 1],
+      ($edit['audio_streaming_player_theme']));
+    variable_set('audio_streaming_player_auto_play_' . $delta[strlen($delta) - 1],
+      ($edit['audio_streaming_player_auto_play']));
   }
   else {
     drupal_set_message(t('Invalid URL'), 'error');
