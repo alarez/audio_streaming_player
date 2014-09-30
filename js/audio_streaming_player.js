@@ -156,7 +156,7 @@
           // Ajax call to get the metadata.
           $.ajax({
             data: parameters,
-            url: '/sites/all/modules/audio_streaming_player/NowPlaying/as_getnowplaying.php',
+            url: '/sites/all/modules/contrib/audio_streaming_player/NowPlaying/as_getnowplaying.php',
             type: 'post',
             beforeSend: function() {
 
