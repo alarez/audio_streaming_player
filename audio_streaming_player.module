@@ -295,6 +295,10 @@ function audio_streaming_player_block_save($delta = '', $edit = array()) {
  * Implements hook_block_info().
  */
 function audio_streaming_player_block_info() {
+  $blocks['streamingplayer_1'] = array(
+        'info' => 'Audio Streaming Player Block 1' ,
+        'cache' => DRUPAL_NO_CACHE,
+  );
   // Existing block number.
   $count = variable_get('audio_streaming_player_count_blocks');
   $deleted_blocks = explode('-', variable_get('audio_streaming_player_deleted_blocks'));
