@@ -342,21 +342,26 @@ function audio_streaming_player_block_view($delta = '') {
         case 2:
           $audio_streaming_player_theme = 'audio_streaming_player_text';
           break;
+
+        default:
+          $audio_streaming_player_theme = 'audio_streaming_player_text';
+          break;
       }
+
+      $module_path = drupal_get_path('module', 'audio_streaming_player');
       // Assign content.
       $block['content'] = array(
-        '#markup' => theme("$audio_streaming_player_theme", array('theme' => "")),
+        '#markup' => theme($audio_streaming_player_theme, array('theme' => "")),
         '#attached' => array(
           'css' => array(
-            drupal_get_path('module', 'audio_streaming_player') . '/themes/' .
-            "$audio_streaming_player_theme" . '/css/' .
-            "$audio_streaming_player_theme" . '.css',
+            $module_path . '/themes/' .
+            $audio_streaming_player_theme . '/css/' .
+            $audio_streaming_player_theme . '.css',
           ),
           // Libraries.
           'js' => array(
             libraries_get_path('JPlayer') . '/jquery.jplayer.min.js',
-            drupal_get_path('module', 'audio_streaming_player') .
-            '/js/audio_streaming_player.js',
+            $module_path . '/js/audio_streaming_player.js',
             libraries_get_path('JPlayer') . '/add-on/jquery.jplayer.inspector.js',
             drupal_add_js(array(
               'audiostreamingplayer' => array(
@@ -364,7 +369,9 @@ function audio_streaming_player_block_view($delta = '') {
                 'audio_streaming_player_stream_url' => variable_get('audio_streaming_player_stream_url_' .
                     $delta[strlen($delta) - 1]),
                 'audio_streaming_player_auto_play' => variable_get('audio_streaming_player_auto_play_' .
-                    $delta[strlen($delta) - 1]))), 'setting'),
+                    $delta[strlen($delta) - 1]),
+                  'path' => $module_path )
+            ), 'setting'),
           ),
         ),
       );
